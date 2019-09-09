@@ -8,8 +8,7 @@ html
 {
 	background: url('32042.jpg');
 	background-repeat:no-repeat;
-
-   background-size:cover;
+    background-size:cover;
 }
 
 #stars {
@@ -84,10 +83,12 @@ html
 }
 .main {
   position: relative;
-  margin: auto;
-  overflow: hidden;
-  width: 850px;
-  height: 480px;
+  display: inline-block;
+  /* align-content: center;*/
+  /* overflow: hidden; */
+  margin: 0 !important;
+  width:100%;
+  height: auto;
 }
 
 /* h1 {
@@ -106,10 +107,17 @@ h1 sup {
 footer
 {
 	position: fixed;
-  bottom: 0;
-  width: 80%;
+	bottom: 0;
+	display: flex;
+	flex-basis: 100%;
+	flex-direction: row;
+	justify-content: center;
+  	justify-items: center;
 	height: 17.5%;
 	text-align: center;
+	/* margin-left: calc(50%); */
+	width: 80%;
+
 }
 
 #countdown {
@@ -119,18 +127,16 @@ footer
   font-family: "Lato", sans-serif;
   font-size: 0.75em;
   letter-spacing: 5px;
-  margin-top: 8%;
-	font-weight: bold;
-
+  margin: 0;
+  margin-top: auto;
+  font-weight: bold;
 }
 
 .days, .hours, .minutes, .seconds, .left {
   display: inline-block;
   padding: 15px;
-  width: 100px;
+  width: auto;
   border-radius: 10px;
-	c
-
 }
 
 .days {
@@ -149,9 +155,6 @@ footer
   background:  #2186FF;
 }
 
-.left {
-	background: #E10A0A;
-}
 .c-number {
   font-family: "Montserrat", sans-serif;
   color: #fff;
@@ -167,12 +170,12 @@ footer
 }
 
 body{
-	height: 100%;
+	height: 100vh;
 }
 
 #loading{
 	margin-top: 5%;
-	/* display: block; */
+	display: block;
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -189,7 +192,6 @@ body{
 	right: 0;
 	margin: auto;
 	justify-content: center;
-
 	-webkit-animation: rotation 40s infinite linear;
 }
 
@@ -215,6 +217,7 @@ body{
 		top: 15px;
 		margin: auto;
 		width: 55%;
+		z-index: 100;
 	}
 	#loading-img
 	{
@@ -227,6 +230,19 @@ body{
 		display: block;
 		font-size: 1.5rem;
 	}
+	#countdown{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin-top: -200px;
+		width: 120%;
+		margin-left: 2%;
+	}
+	.c-number {
+		font-family: "Montserrat", sans-serif;
+		color: #fff;
+		font-size: 1rem;
+	  }
 }
 
 /* iPads (portrait and landscape) ----------- */
@@ -237,6 +253,7 @@ body{
 		right: 0;
 		margin: auto;
 		width: 55%;
+		z-index: 100;
 	}
 	#loading-img
 	{
@@ -245,6 +262,9 @@ body{
 	li span {
 		display: block;
 		font-size: 1.5rem;
+	}
+	.main{
+		width: 100%;
 	}
 }
 
@@ -255,6 +275,7 @@ body{
 		right: 0;
 		margin: auto;
 		width: 55%;
+		z-index: 100;
 	}
 	#loading-img
 	{
@@ -263,6 +284,9 @@ body{
 	li span {
 		display: block;
 		font-size: 1.5rem;
+	}
+	.main{
+		width: 100%;
 	}
 }
 
@@ -273,6 +297,7 @@ body{
 		right: 0;
 		margin: auto;
 		width: 55%;
+		z-index: 100;
 	}
 	#loading{
 		margin-top: 0;
@@ -284,6 +309,9 @@ body{
 	li span {
 		display: block;
 		font-size: 1.5rem;
+	}
+	.main{
+		width: 100%;
 	}
 }
 
@@ -295,6 +323,7 @@ body{
 		top: 15px;
 		margin-left:0;
 		width: 20%;
+		z-index: 100;
 	}
 	#loading-img
 	{
@@ -303,6 +332,9 @@ body{
 	}
 	#loading{
 		margin-top: 0;
+	}
+	.main{
+		width: 100%;
 	}
 }
 
@@ -322,5 +354,8 @@ body{
 	}
 	#loading{
 		margin-top: 0;
+	}
+	.main{
+		width: 100%;
 	}
 }

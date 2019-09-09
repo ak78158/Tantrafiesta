@@ -5,12 +5,7 @@
   font-weight: normal;
   font-style: normal;
 }
-/* =======================================================
-*
-* 	Template Style
-*	Edit this section
-*
-* ======================================================= */
+
 body {
   font-family: "Roboto", Arial, sans-serif;
   font-weight: 300;
@@ -64,7 +59,7 @@ body {
 	height: 3px;
 	background: transparent;
 	box-shadow: 309px 452px #FFF , 145px 1856px #FFF , 1459px 572px #FFF , 1282px 505px #FFF , 1551px 240px #FFF , 1117px 1901px #FFF , 570px 1148px #FFF , 1995px 1541px #FFF , 861px 1162px #FFF , 1587px 545px #FFF , 1736px 1414px #FFF , 754px 838px #FFF , 1345px 963px #FFF , 733px 1943px #FFF , 1505px 332px #FFF , 707px 810px #FFF , 1989px 254px #FFF , 388px 1799px #FFF , 1866px 592px #FFF , 345px 48px #FFF , 43px 394px #FFF , 985px 557px #FFF , 761px 725px #FFF , 790px 1413px #FFF , 1406px 702px #FFF , 292px 1680px #FFF , 1340px 1293px #FFF , 650px 60px #FFF , 1772px 1497px #FFF , 1053px 464px #FFF , 1145px 1754px #FFF , 87px 1972px #FFF , 540px 1184px #FFF , 1901px 1410px #FFF , 997px 830px #FFF , 712px 761px #FFF , 1069px 500px #FFF , 1868px 1571px #FFF , 522px 610px #FFF , 483px 895px #FFF , 971px 1743px #FFF , 264px 1333px #FFF , 1642px 1657px #FFF , 901px 1944px #FFF , 208px 47px #FFF , 1828px 1236px #FFF , 32px 790px #FFF , 775px 625px #FFF , 769px 1318px #FFF , 1905px 6px #FFF , 1219px 123px #FFF , 142px 579px #FFF , 940px 879px #FFF , 1149px 986px #FFF , 43px 210px #FFF , 69px 363px #FFF , 885px 1825px #FFF , 820px 961px #FFF , 667px 1376px #FFF , 466px 812px #FFF , 310px 249px #FFF , 1805px 1796px #FFF , 1199px 1309px #FFF , 1204px 1656px #FFF , 34px 959px #FFF , 507px 1575px #FFF , 1577px 1452px #FFF , 1379px 1872px #FFF , 942px 111px #FFF , 23px 1840px #FFF , 794px 86px #FFF , 263px 1294px #FFF , 610px 1354px #FFF , 200px 1527px #FFF , 128px 87px #FFF , 547px 1728px #FFF , 988px 1716px #FFF , 881px 1641px #FFF , 1075px 1902px #FFF , 418px 1804px #FFF , 614px 202px #FFF , 1662px 1706px #FFF , 993px 1074px #FFF , 1044px 266px #FFF , 373px 896px #FFF , 1734px 1853px #FFF , 161px 1922px #FFF , 627px 323px #FFF , 1692px 1715px #FFF , 1776px 7px #FFF , 1065px 1316px #FFF , 1993px 1896px #FFF , 520px 1704px #FFF , 1823px 1533px #FFF , 1816px 1022px #FFF , 487px 1199px #FFF , 1098px 1841px #FFF , 663px 1329px #FFF , 1593px 27px #FFF , 1286px 1643px #FFF;
-	animation: animStar 150s linear infinite;
+	animation: animStar 100s cubic-bezier(0.5, 0.2, 0.7, 1.0) infinite;
 }
 #stars3:after {
 	content: " ";
@@ -94,13 +89,6 @@ body {
 	background: -webkit-linear-gradient(white, #38495a);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-}
-.main {
-  position: relative;
-  margin: auto;
-  overflow: hidden;
-  width: 850px;
-  height: 480px;
 }
 
 h1 {
@@ -133,7 +121,8 @@ body{
 	/* display: block; */
 	position: absolute;
 	width: 100%;
-	height: 100%;
+  height: 100%;
+  z-index: -20;
 }
 
 #loading-img {
@@ -169,7 +158,7 @@ body{
 		position: absolute;
 		left: 0;
 		right: 0;
-		top: 15px;
+		top: 10px;
 		margin: auto;
 		width: 55%;
 	}
@@ -215,7 +204,7 @@ body{
 	}
 	#loading-img
 	{
-		width: 90%;
+		width: 60%;
 	}
 	li span {
 		display: block;
@@ -510,6 +499,7 @@ figure figcaption {
 #fh5co-main {
   width: 80%;
   float: right;
+  padding: 1em;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -584,8 +574,8 @@ figure figcaption {
 
 #fh5co-main .fh5co-narrow-content {
   position: relative;
-  width: 93%;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0 0;
   padding: 3em 0;
   clear: both;
 }
@@ -629,7 +619,7 @@ figure figcaption {
 }
 #fh5co-hero .flexslider .slides li {
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   background-position: bottom center;
   min-height: 500px;
   position: relative;
@@ -1153,7 +1143,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
   font-size: 18px;
   margin-bottom: 2em;
   font-weight: 500;
-
+  
   letter-spacing: 2px;
 }
 .fh5co-heading.fh5co-light {
@@ -1482,20 +1472,6 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 
 .js .animate-box {
   opacity: 0;
-}
-#rotateimg270 {
-  -webkit-transform:rotate(270deg);
-  -moz-transform: rotate(270deg);
-  -ms-transform: rotate(270deg);
-  -o-transform: rotate(270deg);
-  transform: rotate(270deg);
-}
-#rotateimg90 {
-  -webkit-transform:rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  transform: rotate(90deg);
 }
 
 /*# sourceMappingURL=style.css.map */
